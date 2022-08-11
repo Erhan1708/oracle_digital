@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi&display=swap');
+.container{
+   background-color: #3a7b99;
+   color: #fff;
+   font-family: 'Tiro Gurmukhi', serif;
+}
+.users{
+   display: grid;
+   grid-template-columns:1fr 1fr 1fr 1fr;
+}
+.userBlock{
+   width: 200px;
+   background-color: #70afce;
+   margin: 40px;
+   padding: 20px;
+   border-radius: 30px;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.container h1{
+   font-size: 27px;
+   margin-left: 30px;
+}
+.info{
+   font-size: 17px;
+   margin-top: -15px;
+}
+.title{
+   font-size: 14px;
+   color: gainsboro;
+}
+.userBlock a{
+   color: #fff;
+   text-decoration: none;
+   text-align: center;
+   border: 1px solid gainsboro;
+   border-radius: 20px;
+   padding: 7px;
+   background-color: #a5def1;
+}
+.blockInfo{
+   margin-top: -15px;
+}
