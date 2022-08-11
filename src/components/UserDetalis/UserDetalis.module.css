@@ -1,0 +1,16 @@
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+}
+.userBlock {
+   width: 500px;
+   background-color: #70afce;
+   margin: 40px;
+   padding: 20px;
+   border-radius: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}

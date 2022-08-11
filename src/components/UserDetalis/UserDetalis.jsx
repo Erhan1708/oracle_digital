@@ -1,25 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { UserContext } from "../../context/context";
 import styles from "./UserDetalis.module.css";
 const UserDetalis = () => {
-	const [user, setUser] = useState([]);
+   const { users } = useContext(UserContext);
 
-	useEffect(() => {
-		fetch("https://jsonplaceholder.typicode.com/users")
-			.then((response) => {
-				if (response.status === 200) {
-					console.log(response);
-					return response.json();
-				} else {
-					console.log("произошла ошибка. Статус ошибки:" + response.status);
-				}
-			})
-			.then((data) => setUser(data));
-	}, []);
+   const params = useParams();
 
-	const params = useParams();
-
-	const detalisUser = user.find((item) => item.id === +params.id);
+   const detalisUser = users.find((item) => item.id === +params.id);
 	return (
 		<div>
 			<div className={styles.container}>
@@ -50,7 +38,7 @@ const UserDetalis = () => {
 							<p className={styles.info}>{detalisUser.address.suite}</p>
 						</div>
 						<div className={styles.blockInfo}>
-							<p className={styles.title}>Phone numberм</p>
+							<p className={styles.title}>Phone number</p>
 							<p className={styles.info}>{detalisUser.phone}</p>
 						</div>
 						<div className={styles.blockInfo}>

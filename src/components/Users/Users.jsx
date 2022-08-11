@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, {useContext , useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Users.module.css";
+import { UserContext } from "../../context/context";
 const Users = () => {
-	const [users, setUsers] = useState([]);
+   const { users, setUsers } = useContext(UserContext);
 
 	useEffect(() => {
 		fetch("https://jsonplaceholder.typicode.com/users")
@@ -15,14 +16,14 @@ const Users = () => {
 				}
 			})
 			.then((data) => setUsers(data));
-	}, []);
+	}, [setUsers]);
 
 	return (
 		<div className={styles.container}>
 			<h1>user information</h1>
 			<div className={styles.users}>
 				{users.map((item) => (
-					<div className={styles.userBlock}>
+					<div className={styles.userBlock} key={item.id}>
 						<div className={styles.blockInfo}>
 							<p className={styles.title}>Surname</p>
 							<p className={styles.info}>{item.name}</p>
