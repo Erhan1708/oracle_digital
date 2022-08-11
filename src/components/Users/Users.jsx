@@ -17,7 +17,6 @@ const Users = () => {
 			})
 			.then((data) => setUsers(data));
 	}, [setUsers]);
-
 	return (
 		<div className={styles.container}>
 			<h1>user information</h1>
@@ -49,7 +48,7 @@ const Users = () => {
 							<p className={styles.info}>{item.address.suite}</p>
 						</div>
 						<div className={styles.blockInfo}>
-							<p className={styles.title}>Phone numberм</p>
+							<p className={styles.title}>Phone number</p>
 							<p className={styles.info}>{item.phone}</p>
 						</div>
 						<div className={styles.blockInfo}>
@@ -60,10 +59,10 @@ const Users = () => {
 							<p className={styles.title}>Website</p>
 							<p className={styles.info}>{item.website}</p>
                   </div>
-                  <Link to={`/detalis/${item.id}`}>More about the user</Link>
+                  <Link to={`/detalis/${item.id}`} >More about the user</Link>
                </div>
-            
-				))}
+            ))
+            }
 			</div>
 		</div>
 	);

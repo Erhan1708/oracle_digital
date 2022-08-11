@@ -11,6 +11,21 @@
    padding: 20px;
    border-radius: 30px;
    display: flex;
-   flex-direction: column;
    justify-content: center;
+}
+.title{
+   font-size: 14px;
+   color: gainsboro;
+}
+.info{
+   font-size: 17px;
+   margin-top: -15px;
+}
+.blockInfo{
+   margin-top: -15px;
+}
+.container img{
+   width: 100px;
+   height: 100px;
+
 }
