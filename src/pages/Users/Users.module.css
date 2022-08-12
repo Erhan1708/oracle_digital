@@ -53,3 +53,33 @@
       align-items: center;
    }
 }
+.Header{
+   display: flex;
+   flex-direction: row;
+}
+
+.Header input {
+   background-color: #e3edf7;
+   padding: 0 20px;
+   border: none;
+   display: block;
+   font-family: 'Orbitron', sans-serif;
+   font-weight: 600;
+   color: #a9b8c9;
+   -webkit-appearance: none;
+   transition: all 240ms ease-out;
+   width: 200px;
+   height: 40px;
+   margin: 10px 60px ;
+}
+
+.Header input::placeholder {
+      color: #6d7f8f;
+      
+   }
+
+   .Header input:focus {
+      outline: none;
+      color: #6d7f8f;
+      background-color: lighten(#e3edf7, 3%);
+   }
